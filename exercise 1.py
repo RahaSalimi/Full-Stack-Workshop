@@ -1,6 +1,7 @@
 
-input1=input("please enter first input: ")
-input2=input("please enter second input: ")
+input1=float(input("please enter first input: "))
+input2=float(input("please enter second input: "))
+
 
 inputs_sum= input1+input2
 inputs_sub=input1-input2
