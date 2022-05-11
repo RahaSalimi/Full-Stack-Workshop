@@ -65,7 +65,7 @@ def delete_grade():
 
 action=input("what action do you want to take? (add , search  , update or delete): ")
 
-if action == "search":
+if action == "add":
      add_student()
 elif action == "search":
     search_grade()
