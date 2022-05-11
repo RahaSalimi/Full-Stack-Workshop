@@ -63,15 +63,15 @@ def delete_grade():
         
     return students_Dict
 
-action=input("what action do you want to take? (add , search  , update or delete): ")
-
-if action == "add":
+while(1):
+  action=input("what action do you want to take? (add , search  , update or delete): ")
+  if action == "add":
      add_student()
-elif action == "search":
+  elif action == "search":
     search_grade()
-elif action == "update":
+  elif action == "update":
     update_grade()
-elif action =="delete":
+  elif action =="delete":
     delete_grade()
 
 
