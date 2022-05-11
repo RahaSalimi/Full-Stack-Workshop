@@ -31,29 +31,38 @@ def search_grade():
 
 
 #function to update a student's grade
+isupdate ='yes'
 def update_grade():
-
-  key = input("please enter student name to update: ")
-  if key in students_Dict.keys():
+  while isupdate =='yes':
+    key = input("please enter student name to update: ")
+    if key in students_Dict.keys():
         print("student exist,please enter new grade ")
         new_grade=int(input())
         students_Dict.update({key:new_grade})
         print("grade updated =", new_grade)
-  else:
+    else:
         print("Student Not Exist")
+
+    addupdate= input('Would you like to update another grade? (yes or no): ')
+    if addupdate =='no':
+        break
+   
 
 
 #function to delete a students
+isdelete='yes'
 def delete_grade():
-
-  remove_key= input("please enter student name to delete: ")
-  if remove_key in students_Dict.keys():
-	    pop_item= students_Dict.pop(remove_key)
+  while isdelete== 'yes':
+    remove_key= input("please enter student name to delete: ")
+    if remove_key in students_Dict.keys():
+	    pop_item = students_Dict.pop(remove_key)
         print("student {} removed from list",remove_key )
-  else:
+    else:
         print("Student Not Exist")
 
-
+    adddelete= input('Would you like to update another grade? (yes or no): ')
+    if adddelete =='no':
+        break
 
 action=input("what action do you want to take? (search  or update or delete): ")
 
@@ -61,8 +70,7 @@ if action == "search":
     search_grade()
 elif action == "update":
     update_grade()
-elif action == "delete":
-    delete_grade() 
+
 
 
 
