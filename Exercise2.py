@@ -7,26 +7,23 @@ def add_student():
  while addStudnt == 'yes':
     name = input('Please enter the name of the student: ')
     grade = int(input('Please enter the grade of the student: '))
-    
-
     students_Dict[name] = [grade ]
-
     addContact = input('Would you like to add another student? (yes or no): ')
-
     if addContact == 'no':
         return students_Dict
 
+
 # function to search a student
 issearch='yes'
-def search_grade():
+def search_student(dict):
     while issearch == 'yes':
-        search_grade = int(input("plese enter a grade to search: "))
-        for name, grade in students_Dict.items():  
-          if grade == search_grade:
-            print("we found the a student with name of " + name + " for grade: "  + grade)
+        search_name = input("plese enter name of student: ")
+        for name, grade in dict.items():  
+          if name == search_name:
+            print("we found the a student with name of " + search_name + " for grade: "  + grade)
           else:
             print("sorry we couldnt find the grade in  list. please try another grade")   
-
+            
         addsarch= input('Would you like to search another grade? (yes or no): ')
         if addsarch == 'no':
          break
@@ -37,10 +34,11 @@ isupdate ='yes'
 def update_grade():
   while isupdate =='yes':
     key = input("please enter student name to update: ")
-    if key in students_Dict.keys():
+    if key in students_Dict:
         print("student exist,please enter new grade ")
+        index=students_Dict.index(key)
         new_grade=int(input("enter new grade: "))
-        students_Dict.update({key:new_grade})
+        students_Dict.update({"key":new_grade})
         print("grade updated to: ", new_grade)
 
     else:
@@ -68,7 +66,7 @@ while(1):
   if action == "add":
      add_student()
   elif action == "search":
-    search_grade()
+    search_student(students_Dict)
   elif action == "update":
     update_grade()
   elif action =="delete":
