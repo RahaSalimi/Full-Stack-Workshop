@@ -63,7 +63,7 @@ def update_student():
 
 #function to delete a students
 def delete_student():
-    remove_key=input ("enter the name of the student you want to delete")
+    remove_key=input ("enter the name of the student you want to delete: ")
     if remove_key in students_Dict.keys():
         students_Dict.pop(remove_key)
         print("student ", remove_key,"has been deleted")
