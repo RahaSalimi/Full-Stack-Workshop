@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+
+    <h1 class="heading">Welcome to Student dashboard</h1>
+    <header>
+        <nav>
+            <ul class="topnav">
+                <li><a class="active" href="#add">Add</a></li>
+                <li><a href="#edit">Edit</a> </li>
+                <li><a href="#delete">Delete</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="add" class="addstudent">
+                <h2>Add New Student</h2>
+                <form method="post" action="">
+                    <label for="sname"><b>studnt name</b></label>
+                    <input type="text" placeholder="Please enter studnt name" name="sname" required>
+                    <label for="semail"><b>student email</b></label>
+                    <input type="email" placeholder="please enter student email" name="semail" required>
+                    <label for="sage"><b>student age</b></label>
+                    <input type="number" placeholder="please enter student age" name="sage" required>
+                    <label for="snumber"><b>phone number</b></label>
+                    <input type="number" placeholder=" please enter phone number" name="snumber" required>
+                    <label><b>gender</b></label><br>
+                    <div><input type="radio" id="male" name="smale" value="male" class="gender">
+                        <label for="smale">male</label>
+                    </div>
+                    <div><input type="radio" id="female" name="sfemale" value="female" class="gender">
+                        <label for="sfemale">female</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Add</button>
+                </form>
+            </section>
+
+            <section id="edit" class="editstudent">
+                <h2>Edite Student</h2>
+                <form method="post" action="">
+                    <label for="sname"><b>studnt name</b></label>
+                    <input type="text" placeholder="Please enter studnt name" name="sname" required>
+                    <button type="submit" class="submit-btn">Edit</button>
+                </form>
+            </section>
+
+            <section id="delete" class="deletestudent">
+                <h2>delete Student</h2>
+                <form method="post" action="">
+                    <label for="sname"><b>studnt name</b></label>
+                    <input type="text" placeholder="Please enter studnt name" name="sname" required>
+                    <button type="submit" class="submit-btn">Delete</button>
+                </form>
+            </section>
+
+            <section id="search" class="searchstudent">
+                <input type="text" placeholder="Search a name..">
+            </section>
+
+        </div>
+        <div class="container">
+            <h2>here is the list of students</h2>
+            <table>
+
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Copyright 2022</p>
+    </footer>
+
+</body>
+
+</html>
