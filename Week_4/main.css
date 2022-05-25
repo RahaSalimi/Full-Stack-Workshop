@@ -1,0 +1,37 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+}
+h1.heading {
+    background-color: #686868;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px 0;
+    font-size: 50px;
+    color: #fff;
+}
+
+h1.footer {
+    clear: both;
+    background-color: #686868;
+    color: #fff;
+    font-size: 17px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+ul.menu li {
+    list-style: none;
+}
+section.col-lg-3.col-sm-12.leftside {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+}
+
+section.col-lg-9.col-sm-12.rightside {
+    padding: 50px;
+}
