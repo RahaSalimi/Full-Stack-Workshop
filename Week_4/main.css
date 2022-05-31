@@ -28,10 +28,11 @@ ul.menu li {
     list-style: none;
 }
 section.col-lg-3.col-sm-12.leftside {
-    background-color: #f1f1f1;
+    background-color: #ccc;
     padding: 50px 0;
 }
 
 section.col-lg-9.col-sm-12.rightside {
+    background-color: #f1f1f1;
     padding: 50px;
 }
